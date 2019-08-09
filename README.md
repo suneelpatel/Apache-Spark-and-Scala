@@ -2,7 +2,7 @@
 
 # Table of Content
 1. Big Data
-2. 
+2. HADOOP ECOSYSTEM
 
 
 
@@ -25,7 +25,7 @@ While big data has come far, its usefulness is only just beginning. Cloud comput
 •	More complete answers mean more confidence in the data—which means a completely different approach to tackling problems.
 
 
-# HADOOP ECOSYSTEM
+# 2. HADOOP ECOSYSTEM
 
 “Hadoop Ecosystem is neither a programming language nor a service; it is a platform or framework which solves big data problems.”
 You can consider it as a suite which encompasses a number of services (ingesting, storing, analyzing and maintaining) inside it. Let us discuss and get a brief idea about how the services work individually and in collaboration.
