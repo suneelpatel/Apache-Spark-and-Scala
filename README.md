@@ -22,8 +22,8 @@ With the advent of the Internet of Things (IoT) , more objects and devices are c
 While big data has come far, its usefulness is only just beginning. Cloud computing has expanded big data possibilities even further. The cloud offers truly elastic scalability, where developers can simply spin up ad hoc clusters to test a subset of data. 
 
 #### Benefits of Big Data and Data Analytics:
-•	Big data makes it possible for you to gain more complete answers because you have more information.
-•	More complete answers mean more confidence in the data—which means a completely different approach to tackling problems.
+* Big data makes it possible for you to gain more complete answers because you have more information.
+* More complete answers mean more confidence in the data—which means a completely different approach to tackling problems.
 
 
 # 2. HADOOP ECOSYSTEM
@@ -32,19 +32,19 @@ While big data has come far, its usefulness is only just beginning. Cloud comput
 You can consider it as a suite which encompasses a number of services (ingesting, storing, analyzing and maintaining) inside it. Let us discuss and get a brief idea about how the services work individually and in collaboration.
 Below are the Hadoop components, that together form a Hadoop ecosystem, I will be covering each of them in this blog:
 
-•	HDFS -> Hadoop Distributed File System
-•	YARN -> Yet Another Resource Negotiator
-•	MapReduce -> Data processing using programming
-•	Spark -> In-memory Data Processing
-•	PIG, HIVE-> Data Processing Services using Query (SQL-like)
-•	HBase -> NoSQL Database
-•	Mahout, Spark MLlib -> Machine Learning
-•	Apache Drill -> SQL on Hadoop
-•	Zookeeper -> Managing Cluster
-•	Oozie -> Job Scheduling
-•	Flume, Sqoop -> Data Ingesting Services
-•	Solr & Lucene -> Searching & Indexing 
-•	Ambari -> Provision, Monitor and Maintain cluster
+* **HDFS** -> Hadoop Distributed File System
+* **YARN** -> Yet Another Resource Negotiator
+* **MapReduce** -> Data processing using programming
+* **Spark** -> In-memory Data Processing
+*	**PIG, HIVE** -> Data Processing Services using Query (SQL-like)
+* **HBase** -> NoSQL Database
+* **Mahout, Spark MLlib** -> Machine Learning
+* **Apache Drill** -> SQL on Hadoop
+* **Zookeeper** -> Managing Cluster
+* **Oozie** -> Job Scheduling
+* **Flume, Sqoop** -> Data Ingesting Services
+* **Solr & Lucene** -> Searching & Indexing 
+* **Ambari** -> Provision, Monitor and Maintain cluster
 
 # 3. HDFS
 
