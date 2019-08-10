@@ -49,19 +49,23 @@ Below are the Hadoop components, that together form a Hadoop ecosystem, I will b
 # 3. HDFS
 
 Before moving ahead in this HDFS, let’s take you through some of the insane statistics related to HDFS:
-•	In 2010, Facebook claimed to have one of the largest HDFS cluster storing 21 Petabytes of data.
-•	In 2012, Facebook declared that they have the largest single HDFS cluster with more than 100 PBof data.
-•	And Yahoo! has more than 100,000 CPU in over 40,000 servers running Hadoop, with its biggest Hadoop cluster running 4,500 nodes. All told, Yahoo! stores 455 petabytes of data in HDFS.
-•	In fact, by 2013, most of the big names in the Fortune 50 started using Hadoop.
+* In 2010, Facebook claimed to have one of the largest HDFS cluster storing 21 Petabytes of data.
+* In 2012, Facebook declared that they have the largest single HDFS cluster with more than 100 PBof data.
+* And Yahoo! has more than 100,000 CPU in over 40,000 servers running Hadoop, with its biggest Hadoop cluster running 4,500 nodes. All told, Yahoo! stores 455 petabytes of data in HDFS.
+* In fact, by 2013, most of the big names in the Fortune 50 started using Hadoop.
 Too hard to digest? Right. As discussed in Hadoop Tutorial, Hadoop has two fundamental units –Storage and Processing. When I say storage part of Hadoop, I am referring to HDFS which stands for Hadoop Distributed File System. So, in this blog, I will be introducing you to HDFS.
-Here, I will be talking about:
-•	What is HDFS?
-•	Advantages of HDFS
-•	Features of HDFS
+
+#### Here, I will be talking about:
+* What is HDFS?
+* Advantages of HDFS
+* Features of HDFS
+
 Before talking about HDFS, let me tell you, what is a Distributed File System?
-DFS or Distributed File System:
+
+**DFS or Distributed File System:**
 Distributed File System talks about managing data, i.e. files or folders across multiple computers or servers. In other words, DFS is a file system that allows us to store data over multiple nodes or machines in a cluster and allows multiple users to access data. So basically, it serves the same purpose as the file system which is available in your machine, like for windows you have NTFS (New Technology File System) or for Mac you have HFS (Hierarchical File System). The only difference is that, in case of Distributed File System, you store data in multiple machines rather than single machine. Even though the files are stored across the network, DFS organizes, and displays data in such a manner that a user sitting on a machine will feel like all the data is stored in that very machine.
-What is HDFS?
+
+#### What is HDFS?
 Hadoop Distributed file system or HDFS is a Java based distributed file system that allows you to store large data across multiple nodes in a Hadoop cluster. So, if you install Hadoop, you get HDFS as an underlying storage system for storing the data in the distributed environment.
 
 Let’s take an example to understand it. Imagine that you have ten machines or ten computers with a hard drive of 1 TB on each machine. Now, HDFS says that if you install Hadoop as a platform on top of these ten machines, you will get HDFS as a storage service. Hadoop Distributed File System is distributed in such a way that every machine contributes their individual storage for storing any kind of data.
