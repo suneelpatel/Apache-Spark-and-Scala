@@ -4,7 +4,7 @@
 1. Big Data
 2. Hadoop Ecosystem
 3. HDFS
-
+4. Scala
 
 
 # 1. Big Data
@@ -68,7 +68,18 @@ Let’s take an example to understand it. Imagine that you have ten machines or 
 
 
 # 4. Scala
-Features of Scala
+It is basically an acronym for “Scalable Language”. Scala is an easy-to-learn language and supports both Object Oriented Programming as well as Functional Programming.
+
+#### Why is Spark Programmed in Scala?
+•	Scala is a pure object-oriented language, in which conceptually every value is an object and every operation is a method-call. The language supports advanced component architectures through classes and traits.
+•	Scala is also a functional language. It supports functions, immutable data structures and gives preference to immutability over mutation.
+•	Scala can be seamlessly integrated with Java
+•	It is already being widely used for Big Data platforms and development of frameworks like Akka, Scalding, Play, etc.
+•	Being written in Scala, Spark can be embedded in any JVM-based operational system.
+To learn Scala, it’s not necessary to have a prior knowledge of Java, or any other programming language. If you want to learn it, all you need is to have the basic understanding of core programming concepts.
+
+
+#### Features of Scala
 There are following features of scala:
 o	Type inference
 o	Singleton object
