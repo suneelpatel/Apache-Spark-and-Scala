@@ -1,0 +1,81 @@
+Scala Variables and Data Types
+===============================
+Variables are reserved memory locations for storing values.
+You can create mutable and immutable variable in scala. Let's see how to declare variable.
+
+--------------------------------------
+Immutable Variable - 'Val' (Read Only)
+--------------------------------------
+* Similar to Java final variable
+* Once initialized, values can't be reassigned
+
+Example 1:
+
+scala> var data = 100
+
+scala> data = 101  // Error: reassignment to val  
+
+
+Example 2: 
+
+scala> val msg = "Hello World"
+msg: String = Hello World
+
+scala> msg = "Hello!"
+<console>:8: error: reassignment to val
+       msg = "Hello!"
+
+The above code throws an error because we have changed content of immutable variable, which is not allowed. 
+So if you want to change content then it is advisable to use var instead of val.
+
+------------------------------------------
+Mutable Variable - 'Var' (Read and Write)
+------------------------------------------
+You can create mutable variable using var keyword. It allows you to change value after declaration of variable.
+
+Example 1:
+
+scala> var data = 100  
+
+scala> data = 101  // It works, No error.  
+
+Example 2:
+
+scala> var msg = "Hello World"
+msg: String = Hello World
+
+scala> msg = "Hello!"
+msg: String = Hello!
+
+In the above code, var is a keyword and data is a variable name. It contains an integer value 100. 
+Scala is a type infers language so you don?t need to specify data type explicitly. You can also mention data type of variable explicitly as we have used in below.
+
+Another example of variable
+
+scala> var data:Int = 100  // Here, we have mentioned Int (datatype) followed by : (colon)  
+
+============================================================================================================
+Type Inference
+---------------
+* Even though we never declare variable type scala inferred it. This is called type inference in scala.
+* Once a type is assigned to variable, it remain same for entire scope.
+* Thus, Scala is Statically Typed Language.
+
+
+scala> msg = 3
+<console>:8: error: type mismatch;
+ found   : Int(3)
+ required: String
+       msg = 3
+
+=============================================================================================================
+Assigning Block Expression
+---------------------------
+* In Java or C++, a code block is a list of statements in curry braces {}
+* In scala, a block {} is a list of expressions, and result is also expression.
+* The value of block is the value of the last expression of it.
+
+scala> val x = {val a = 10; val b = 100; b-a} 
+x: Int = 90
+
+==============================================================================================================

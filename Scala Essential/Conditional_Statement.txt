@@ -1,0 +1,105 @@
+===============================
+Scala Conditional Expressions
+===============================
+Scala provides if statement to test the conditional expressions. 
+It tests boolean conditional expression which can be either true or false. 
+Scala use various types of if else statements.
+
+-------------
+If statement
+-------------
+The scala if statement is used to test condition in scala. 
+If block executes only when condition is true otherwise execution of if block is skipped.
+
+Syntax:
+
+if(condition){  
+    // Statements to be executed  
+}
+
+Scala Example: If Statement
+
+var age:Int = 20;  
+if(age > 18){  
+    println ("Age is greate than 18")  
+}
+
+
+object Demo {
+     | def main (args: Array[String]){
+     | var x = 10;
+     | if (x<20) {
+     | println("This is if statement");
+     | }
+	 }}
+
+========================================================================================================
+If-else statement
+------------------
+Scala If-Else Statement
+The scala if-else statement tests the condition. 
+If the condition is true, if block executes otherwise else block executes.
+
+Syntax:
+
+if(condition){  
+    // If block statements to be executed  
+} else {  
+    // Else bock statements to be executed  
+}  
+
+Scala if-else example:
+
+var number:Int = 21  
+if(number%2==0){  
+    println("Even number")  
+}else{  
+    println("Odd number")  
+}  
+
+Output:
+
+Odd number
+
+==========================================================================================================
+If-else-if ladder statement
+-------------------------
+The scala if-else-if ladder executes one condition among the multiple conditional statements.
+
+Syntax:
+
+if (condition1){    
+//Code to be executed if condition1 is true    
+} else if (condition2){    
+//Code to be executed if condition2 is true    
+} else if (condition3){    
+//Code to be executed if condition3 is true    
+}    
+...    
+else {    
+//Code to be executed if all the conditions are false    
+}
+
+
+Scala If-Else-If Ladder Example:
+
+var number:Int = 85  
+if(number>=0 && number<50){  
+    println ("fail")  
+}  
+else if(number>=50 && number<60){  
+    println("D Grade")  
+}  
+else if(number>=60 && number<70){  
+    println("C Grade")  
+}  
+else if(number>=70 && number<80){  
+    println("B Grade")  
+}  
+else if(number>=80 && number<90){  
+    println("A Grade")  
+}  
+else if(number>=90 && number<=100){  
+    println("A+ Grade")  
+}  
+else println ("Invalid")  

@@ -1,0 +1,47 @@
+Simple Program of Scala
+=============================
+In this tutorial, you will learn how to write scala programs. To write scala program you need to install scala on your machine. You must have latest jdk installed on your machine because scala compiler creates .class file which is a byte code. Scala interpreter executes this byte code by using jvm (Java Virtual Machine).
+
+Scala Example: Hello Scala
+--------------------------
+
+The following code example is a simple scala program.
+
+object ScalaExample{  
+    def main(args:Array[String]){  
+        println "Hello Scala"  
+    }  
+}  
+
+In the above code, we have created an object ScalaExample. It contains a main method and display message using println method.
+
+This file is saved with the name ScalaExample.scala
+
+Command to compile this code is: scalac ScalaExample.scala
+
+Command to execute the compiled code is: scala ScalaExample
+
+After executing code it yields the following output.
+
+Output:
+
+Hello Scala
+
+========================================================================================
+
+You can also use IDE (Integrated Development Environment) for executing scala code.
+
+The above example is written using object oriented approach. You can also use functional approach to write code in scala.
+
+Scala Example: Hello Scala
+
+Below is the example by using functional approach.
+
+def scalaExample{  
+    println("Hello Scala")  
+}  
+scalaExample            // Calling of function  
+
+Output:
+
+Hello Scala

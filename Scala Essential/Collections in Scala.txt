@@ -1,0 +1,307 @@
+SCALA COLLECTIONS
+=================
+Scala Collections are the containers that hold sequenced linear set of items like List, Set, Tuple, Option, Map etc.
+
+* Collections may be Strict or Lazy
+* Collections may be mutable or immutable
+* They are:
+	# Arrays & Arraybuffers
+	# Lists & Listbuffers
+	# Sets & Setbuffers
+	# Maps & Mapbuffers
+	# Tuples & Tuplebuffers
+
+=======================================================
+ARRAY
+-----
+Array is mutable object. It is a collection of elements which are of the same type.
+
+Declaring Array (1). With Values (2). Without Values
+
+
+val array = new Array[Int](10)
+val array = new Array[String](10)
+
+val mystring = Array("pavan", "kumar", "reddy")
+
+for ( x <- mystring ) {
+    println( x )
+}
+
+//if we want to set value
+array(0)  = 10
+array(1) = 2
+
+
+ArrayBuffer
+-----------
+
+import scala.collection.mutable.ArrayBuffer
+
+val a = ArrayBuffer[Int]()
+
+a += 1
+a += (2,3,4,5)
+a ++= Array(6, 7, 8)
+
+
+a.trimEnd(2)
+a.insert(2, 9)
+a.insert(2,0,9,6,1)
+a.remove(2)
+a.remove(2, 3)
+
+
+//common opperation
+
+Array(1,2,3,4).sum
+Array(1,2,3,4).max
+
+val a = Array(1,5,3,2,4)
+scala.util.Sorting.quickSort(a)
+
+====================================================================================================================
+List
+=====
+ 
+Creating a Scala List object
+----------------------------
+val list = 1 :: 2 :: 3 :: Nil
+
+val list = List(1,2,3)
+
+Adding Element to List
+-----------------------
+
+val x = List(2)
+
+val y = 1 :: x
+
+val z = 0 :: y
+
+
+delete elements from a Scala List or ListBuffer
+-----------------------------------------------
+
+val originalList = List(5, 1, 4, 3, 2)
+
+val newList = originalList.filter(_ > 2)
+
+
+
+import scala.collection.mutable.ListBuffer
+val x = ListBuffer(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+
+You can delete one element at a time, by value:
+x -= 5
+
+
+You can delete elements by position:
+x.remove(0)
+
+
+List to be saved as the Number type.
+------------------------------------
+
+val x = List[Number](1, 2.0, 33d, 0x1)
+
+The List ‘range’ method
+-----------------------
+
+val x = List.range(1,10)
+
+
+The range function can also take a third argument which serves as a "step" 
+
+val x = List.range(0,10,2)
+
+
+The List ‘fill’ method
+----------------------
+
+val x = List.fill(3)("foo")
+
+The List class ‘tabulate’ method
+--------------------------------
+ The tabulate method creates a new List whose elements are created according to the function you supply
+
+ val x = List.tabulate(5)(n => n * n)
+ 
+ 
+prepend items to a List
+-----------------------
+
+// create a List
+val x = List(1,2,3)
+
+// prepend an element to the list
+val y = 0 :: x
+
+
+Appending and merging Lists
+---------------------------
+
+val a = List(1,2,3)
+
+val b = List(4,5,6)
+
+val c = a ::: b
+
+
+You can also merge two Scala lists using the List's concat method:
+
+val c = List.concat(a, b)
+
+
+Iterating lists with foreach
+----------------------------
+val x = List(1,2,3)
+x.foreach { println }
+
+LIST BUFFER
+------------
+
+import scala.collection.mutable.ListBuffer
+
+var fruits = new ListBuffer[String]()
+
+// add one element at a time to the ListBuffer
+fruits += "Apple"
+fruits += "Banana"
+fruits += "Orange"
+
+// add multiple elements
+fruits += ("Strawberry", "Kiwi", "Pineapple")
+
+// remove one element
+fruits -= "Apple"
+
+// remove multiple elements
+fruits -= ("Banana", "Orange")
+
+// remove multiple elements specified by another sequence
+fruits --= Seq("Kiwi", "Pineapple")
+
+// convert the ListBuffer to a List when you need to
+val fruitsList = fruits.toList
+
+
+SETS
+====
+
+Set is a collection that contains no duplicate elements. 
+There are two kinds of Sets, the immutable and the mutable.
+
+var s : Set[Int] = Set()
+
+var s : Set[Int] = Set(1,1,5,5,7)
+
+var s = Set(1,3,5,7)
+
+
+basic operational methods
+-------------------------
+
+      val fruit = Set("apples", "oranges", "pears")
+      val nums: Set[Int] = Set()
+
+      println( "Head of fruit : " + fruit.head )
+      println( "Tail of fruit : " + fruit.tail )
+      println( "Check if fruit is empty : " + fruit.isEmpty )
+      println( "Check if nums is empty : " + nums.isEmpty )
+
+
+	  
+	  
+	  Concatenating Sets
+	  -------------------
+
+You can use either ++ operator or Set.++() method to concatenate two or more sets, 
+but while adding sets it will remove duplicate elements.
+
+val fruit1 = Set("apples", "oranges", "pears")
+val fruit2 = Set("mangoes", "banana", "oranges")
+
+      // use two or more sets with ++ as operator
+var fruit = fruit1 ++ fruit2
+println( "fruit1 ++ fruit2 : " + fruit )
+
+      // use two sets with ++ as method
+fruit = fruit1.++(fruit2)
+println( "fruit1.++(fruit2) : " + fruit )
+
+
+add elements to a Set in Scala
+
+
+
+Mutable set
+-----------
+
+Add elements to a mutable Set with the +=, ++=, and add methods:
+
+
+
+// use var with mutable
+var set = scala.collection.mutable.Set[Int]()
+
+// add one element
+set += 1
+
+// add multiple elements
+set += (2, 3)
+
+// notice that there is no error when you add a duplicate element
+set += 2
+
+// add elements from any sequence (any TraversableOnce)
+set ++= Vector(4, 5)
+
+set.add(6)
+res4: Boolean = true
+
+scala> set.add(5)
+
+
+
+MAP
+---
+
+ val colors1 = Map("red" -> "#FF0000", "azure" -> "#F0FFFF", "peru" -> "#CD853F")
+ val colors2 = Map("blue" -> "#0033FF", "yellow" -> "#FFFF00", "red" -> "#FF0000")
+ 
+ colors1.keys
+ colors1.values
+ colors1.isEmpty
+ 
+ var colors = colors1 ++ colors2
+ 
+ val mapping = Map("pavan" -> "kumar", "nishant" -> "reddy")
+ val mapping = scala.collection.mutable.Map("pavan" -> "kumar", "nishant" -> "reddy")
+ 
+ mapping("pavan")
+ 
+ 
+ mapping -= "nishant"
+ mapping += ("ajay"-> "sharma")
+ mapping.getOrElse("pavan", 0)
+ 
+ 
+ <- ->
+ Tuples
+ ------
+ 
+ val a = (1,4, "pavan", "kumar")
+ a._1, a._3
+ 
+ 
+ val numPairs = List((2, 5), (3, -7), (20, 56))
+
+ for ((a, b) <- numPairs) {
+
+  println(a * b)
+  
+}
+ 
+
